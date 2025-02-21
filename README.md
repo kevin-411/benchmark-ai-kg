@@ -110,14 +110,16 @@ Endpoint: `POST /generate-test-cases`
 
 - Example Request:
 
-```curl -X POST "http://127.0.0.1:5000/generate-test-cases" \
+```
+curl -X POST "http://127.0.0.1:5000/generate-test-cases" \
      -H "Content-Type: application/json" \
      -d '{"requirement": "The system should allow user login via OAuth."}' 
-	 ```
+```
 
 - Response:
 
-```{
+```
+{
     "test_cases": [
         "Verify login with valid OAuth credentials",
         "Verify login with expired OAuth token",
@@ -136,14 +138,16 @@ Endpoint: `POST /detect-defects`
 
 - Example Request:
 
-```curl -X POST "http://127.0.0.1:5000/detect-defects" \
+```
+curl -X POST "http://127.0.0.1:5000/detect-defects" \
      -H "Content-Type: application/json" \
      -d '{"code_snippet": "def divide(a, b): return a / b"}'
 	 ```
 
 - Response:
 
-```{
+```
+{
     "defects": [
         {
             "type": "ZeroDivisionError",
@@ -167,7 +171,8 @@ Endpoint: `POST /detect-defects`
 
 - Response:
 
-```{
+```
+{
     "results": [
         {"name": "SoftwareRequirement", "description": "A structured requirement node."}
     ]

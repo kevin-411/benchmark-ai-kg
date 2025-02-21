@@ -142,7 +142,7 @@ Endpoint: `POST /detect-defects`
 curl -X POST "http://127.0.0.1:5000/detect-defects" \
      -H "Content-Type: application/json" \
      -d '{"code_snippet": "def divide(a, b): return a / b"}'
-	 ```
+```
 
 - Response:
 

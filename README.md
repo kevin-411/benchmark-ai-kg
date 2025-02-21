@@ -112,7 +112,8 @@ Endpoint: `POST /generate-test-cases`
 
 ```curl -X POST "http://127.0.0.1:5000/generate-test-cases" \
      -H "Content-Type: application/json" \
-     -d '{"requirement": "The system should allow user login via OAuth."}'```
+     -d '{"requirement": "The system should allow user login via OAuth."}' 
+	 ```
 
 - Response:
 
@@ -122,7 +123,8 @@ Endpoint: `POST /generate-test-cases`
         "Verify login with expired OAuth token",
         "Verify login with incorrect credentials"
     ]
-}```
+}
+```
 
 2. Detect Defects
 
@@ -136,7 +138,8 @@ Endpoint: `POST /detect-defects`
 
 ```curl -X POST "http://127.0.0.1:5000/detect-defects" \
      -H "Content-Type: application/json" \
-     -d '{"code_snippet": "def divide(a, b): return a / b"}'```
+     -d '{"code_snippet": "def divide(a, b): return a / b"}'
+	 ```
 
 - Response:
 
@@ -147,7 +150,8 @@ Endpoint: `POST /detect-defects`
             "suggestion": "Ensure denominator is checked before division."
         }
     ]
-}```
+}
+```
 
 3. Query the Ontology
 
@@ -167,7 +171,8 @@ Endpoint: `POST /detect-defects`
     "results": [
         {"name": "SoftwareRequirement", "description": "A structured requirement node."}
     ]
-}```
+}
+```
 
 
 ## License
